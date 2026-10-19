@@ -21,7 +21,7 @@ AuctionHouseBot.Neutral.MaxItems = 35000
 AuctionHouseBot.Neutral.MinItems = 25000
 ```
 
-All other present keys matched the deployed `.conf.dist` at capture time. Values here are documentation, **not** an installable live configuration or code patch.
+All other present keys matched the deployed `.conf.dist` at capture time. A read-only check on 2026-10-18 confirmed that the on-disk configuration has exactly the ten overrides listed above (including all 286 multiplied-item entries); its other 438 settings match both the deployed and module-source `.conf.dist` files. This does not independently establish which values the running worldserver has loaded. Values here are documentation, **not** an installable live configuration or code patch.
 
 ## Review focus
 
@@ -29,4 +29,4 @@ Auction volume targets, replenishment rate, faction pool behavior, economics of 
 
 ## Gate to future changes
 
-Preserve upstream default branch. Implement subsequent code/config changes in a separate branch and PR, review CodeRabbit findings, compile/verify, test in game, and record deployed commit/version. No production deployment or restart is part of this baseline PR.
+Preserve upstream default branch. Implement subsequent code/config changes in a separate branch and PR, review CodeRabbit findings, compile/verify, test in-game, and record deployed commit/version. No production deployment or restart is part of this baseline PR.
